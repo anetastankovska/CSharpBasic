@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 
 namespace SEDC.Oop.Class02.Variables
 {
