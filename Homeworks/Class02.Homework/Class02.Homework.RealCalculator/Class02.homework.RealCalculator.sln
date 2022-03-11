@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEDC.Oop.Class02.homework.RealCalculator", "Class02.homework.RealCalculator\SEDC.Oop.Class02.homework.RealCalculator.csproj", "{1B98FCED-BE61-4027-9EF5-F5672B81702C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B98FCED-BE61-4027-9EF5-F5672B81702C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B98FCED-BE61-4027-9EF5-F5672B81702C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B98FCED-BE61-4027-9EF5-F5672B81702C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B98FCED-BE61-4027-9EF5-F5672B81702C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B637AD38-5E25-4031-9F86-14791C37CE40}
+	EndGlobalSection
+EndGlobal
