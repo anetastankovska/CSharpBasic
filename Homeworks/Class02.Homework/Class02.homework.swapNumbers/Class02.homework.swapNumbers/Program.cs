@@ -41,16 +41,17 @@ namespace Class02.homework.swapNumbers
                 parsedSecondInput = temp;
 
                 Console.WriteLine($"After swapping: \n First Number: {parsedFirstInput} \n Second Number: {parsedSecondInput}");
-                break;
+
+                Console.WriteLine("Do you want to try again? (y/n)");
+                repeat = Console.ReadLine();
+
+                if (repeat == "n")
+                {
+                    return;
+                }
             }
 
-            Console.WriteLine("Do you want to try again? (y/n)");
-            repeat = Console.ReadLine();
-
-            if (repeat == "n")
-            {
-                return;
-            }
+            
 
         }
 
@@ -74,16 +75,15 @@ namespace Class02.homework.swapNumbers
                 secondInput = temp;
 
                 Console.WriteLine($"After swapping: \n First input: {firstInput} \n Second input: {secondInput}");
-                break;
-            }
 
+                Console.WriteLine("Do you want to try again? (y/n)");
+                repeat = Console.ReadLine();
 
-            Console.WriteLine("Do you want to try again? (y/n)");
-            repeat = Console.ReadLine();
+                if (repeat == "n")
+                {
+                    return;
+                }
 
-            if (repeat == "n")
-            {
-                return;
             }
         }
 
