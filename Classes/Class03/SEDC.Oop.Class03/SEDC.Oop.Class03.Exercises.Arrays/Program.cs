@@ -46,30 +46,48 @@ namespace SEDC.Oop.Class03.Exercises.Arrays
 
             // Task 3
 
-            string[] names = new string[] { };
+            //string[] names = new string[] { };
 
-            int counter = 0;
-            string response = "Y";
+            //int counter = 0;
 
-            while (response == "Y") { 
-            
-                Console.WriteLine("Enter a name:");
-                string inputName = Console.ReadLine();
-                Array.Resize(ref names, names.Length + 1);
-                names[counter] = inputName;
-                counter++;
+            //while (true) { 
 
-                Console.WriteLine("Do you want to continue? (Y/N)");
-                if (response == "N")
-                {
-                    break;
-                }
-                Console.WriteLine(names);
+            //    Console.WriteLine("Enter a name:");
+            //    string inputName = Console.ReadLine();
+            //    if (string.IsNullOrWhiteSpace(inputName))
+            //    {
+            //        break;
+            //    }
+            //    Array.Resize(ref names, names.Length + 1);
+            //    names[counter] = inputName;
+            //    counter++;
+            //    Console.WriteLine(names.Length);
+            //}
+            //    Console.WriteLine(string.Join(',', names));
 
 
+            int[] arrOfNumbers = new int[]{1, 2, 3, 4};
+
+            for (int i = 0; i < 3; i++)
+            {
+                arrOfNumbers = ShiftRight(arrOfNumbers);
             }
 
+            Console.WriteLine(string.Join(',',arrOfNumbers));
 
+
+
+        }
+
+        public static int[] ShiftRight(int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int temp = arr[i];
+                arr[i] = arr[arr.Length - 1];
+                arr[arr.Length - 1] = temp;
+            }
+            return arr;
         }
 
     }
