@@ -75,7 +75,7 @@ namespace Cllass03.homework
 
                 response = Console.ReadLine().ToUpper();
 
-                if (response == "N" && response != "Y")
+                if (response == "N")
                 {
                     Console.WriteLine("Thank you for using our app!");
                 } 
@@ -125,7 +125,7 @@ namespace Cllass03.homework
                 Console.WriteLine("Do you want to check students for another group?");
                 response = Console.ReadLine().ToUpper();
 
-                if (response == "N" && response != "Y")
+                if (response == "N")
                 {
                     Console.WriteLine("Thank you for using our app!");
                 }
