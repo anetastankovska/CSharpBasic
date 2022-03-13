@@ -97,7 +97,7 @@ namespace SEDC.Oop.Class03.Exercises.Arrays
                     //Console.WriteLine(string.Join(',', names)); 
                     return;
                 }
-                else if (response != "N" && response != "Y")
+                else if (response != "N")
                 {
                     Console.WriteLine("Wrong key entered!");
                     Console.WriteLine($"The names you entered so far are: {string.Join(',', names)}");
