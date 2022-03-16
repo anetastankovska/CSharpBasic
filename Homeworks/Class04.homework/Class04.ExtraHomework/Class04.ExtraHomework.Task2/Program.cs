@@ -1,5 +1,8 @@
 ﻿using System;
 
+//Task 2:
+//Create a function which returns the greatest value stored in an array of real numbers which is specified as parameter.
+
 namespace Class04.ExtraHomework.Task2
 {
     class Program

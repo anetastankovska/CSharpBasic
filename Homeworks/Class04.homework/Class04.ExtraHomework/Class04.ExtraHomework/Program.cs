@@ -1,5 +1,8 @@
 ﻿using System;
 
+//Task 1:
+//Create a function to say whether a string is symmetric (a palindrome). For example, "RADAR" is a palindrome.
+
 namespace Class04.ExtraHomework
 {
     class Program
