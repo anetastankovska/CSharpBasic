@@ -19,7 +19,12 @@ namespace SEDC.Oop.Class05.Classes
                 Name = "Vlatko"
             };
 
+            Person person2 = new Person("Bob", 23);
+            person2.Talk("Bob is my name");
+
             person1.Talk("Hello students!");
+
+
             
             Console.ReadLine();
         }

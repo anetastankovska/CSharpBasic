@@ -12,6 +12,25 @@ namespace SEDC.Oop.Class05.Classes.models
         public int Age { get; set; }
         private long SSN { get; set; }
 
+        public Person()
+        {
+            SSN = GenerateSSN();
+        }
+
+        public Person(string name, int age) 
+        {
+            name = Name;
+            age = Age;
+            SSN = GenerateSSN();
+        }
+
+        public Person(int age)
+        {
+            Age = age;
+            SSN = GenerateSSN();
+            Name = "Jill";
+        }
+
         private long GenerateSSN()
         {
             Random rand = new Random();
