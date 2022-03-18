@@ -9,14 +9,29 @@ namespace Class04.ExtraHomework.Task5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a string to check for letters and their case:");
-            string userInput = Console.ReadLine();
+            //Console.WriteLine("Enter a string to check for letters and their case:");
+            //string userInput = Console.ReadLine();
 
-            CheckAlphaandCase(userInput);
+            //CheckAlphaAndCase(userInput);
+
+            //CheckAlphaAndCase2(userInput);
+
+
+            while (true)
+            {
+                Console.Write("Enter a character:");
+                ConsoleKeyInfo userInput = Console.ReadKey();
+
+                if (userInput.Key == ConsoleKey.Escape)
+                {
+                    break;
+                }
+                Console.WriteLine($" {checkIfCharIsAlphaAndCase(userInput.KeyChar)}");
+            }
         }
 
-
-        public static void CheckAlphaandCase(string testString)
+        //This is the first way by printing the result for each char in cosole
+        public static void CheckAlphaAndCase(string testString)
         {
             char[] charArr = testString.ToCharArray();
             foreach (char character in charArr)
@@ -32,9 +47,43 @@ namespace Class04.ExtraHomework.Task5
                         Console.WriteLine("The character {0} is lowercase", character);
                     }
                 }
-                Console.WriteLine("The character {0} is not an alphabet", character);
+                else
+                {
+                    Console.WriteLine("The character {0} is not an alphabetic", character);
+                }  
             }
-
         }
+
+        //By separating the character check in one method and looping through the array of chars 
+        public static string checkIfCharIsAlphaAndCase(char testChar)
+        {
+            string result = string.Empty;
+            if (char.IsLetter(testChar))
+            {
+                if (char.IsUpper(testChar))
+                {
+                    result = string.Format("The char {0} is uppercase", testChar);
+                }
+                else
+                {
+                    result = string.Format("The char {0} is lowercase", testChar);
+                }
+            }
+            else
+            {
+            result = string.Format("The char {0} is not an alphabetic", testChar);
+            }
+            return result;
+        }
+
+        public static void CheckAlphaAndCase2(string testString)
+        {
+            char[] charArr = testString.ToCharArray();    
+            foreach(char character in charArr)
+            {
+                Console.WriteLine(checkIfCharIsAlphaAndCase(character));
+            }
+        }
+
     }
 }
