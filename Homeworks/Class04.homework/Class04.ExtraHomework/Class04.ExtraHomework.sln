@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Class04.ExtraHomework.Task1", "Class04.ExtraHomework\Class04.ExtraHomework.Task1.csproj", "{D6BD868B-0CF5-43F6-8A73-1B34E2C2D5D8}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Class04.ExtraHomework.Task2", "Class04.ExtraHomework.Task2\Class04.ExtraHomework.Task2.csproj", "{0A3969B9-B1CB-4233-8F29-7701F03785DF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Class04.ExtraHomework.Task3", "Class04.ExtraHomework.Task3\Class04.ExtraHomework.Task3.csproj", "{15338FD6-8ACE-4583-9DC5-90ABAA0843F7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Class04.extraHomework.Task4", "Class04.extraHomework.Task4\Class04.extraHomework.Task4.csproj", "{FF16CB11-ED09-47C3-9B9D-3169EC57FC01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Class04.ExtraHomework.Task4", "Class04.extraHomework.Task4\Class04.ExtraHomework.Task4.csproj", "{FF16CB11-ED09-47C3-9B9D-3169EC57FC01}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Class04.ExtraHomework.Task5", "Class04.ExtraHomework.Task5\Class04.ExtraHomework.Task5.csproj", "{1A0BBB78-9A7E-4752-9678-71547FF72DD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class04.ExtraHomework.Task6", "Class04.ExtraHomework.Task6\Class04.ExtraHomework.Task6.csproj", "{D380D3B4-20A0-474A-9B9B-8704F091F3DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Class04.ExtraHomework.Task6", "Class04.ExtraHomework.Task6\Class04.ExtraHomework.Task6.csproj", "{D380D3B4-20A0-474A-9B9B-8704F091F3DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class04.ExtraHomework.Task7", "Class04.ExtraHomework.Task7\Class04.ExtraHomework.Task7.csproj", "{B5ECEF1C-4B79-4345-BF1C-90DC809E9486}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Class04.ExtraHomework.Task7", "Class04.ExtraHomework.Task7\Class04.ExtraHomework.Task7.csproj", "{B5ECEF1C-4B79-4345-BF1C-90DC809E9486}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Class04.ExtraHomework.Task1", "Class04.ExtraHomework.Task1\Class04.ExtraHomework.Task1.csproj", "{7322B024-FC6A-4ED1-99D2-B76AF63637D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D6BD868B-0CF5-43F6-8A73-1B34E2C2D5D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D6BD868B-0CF5-43F6-8A73-1B34E2C2D5D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D6BD868B-0CF5-43F6-8A73-1B34E2C2D5D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D6BD868B-0CF5-43F6-8A73-1B34E2C2D5D8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0A3969B9-B1CB-4233-8F29-7701F03785DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0A3969B9-B1CB-4233-8F29-7701F03785DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A3969B9-B1CB-4233-8F29-7701F03785DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +47,10 @@ Global
 		{B5ECEF1C-4B79-4345-BF1C-90DC809E9486}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5ECEF1C-4B79-4345-BF1C-90DC809E9486}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5ECEF1C-4B79-4345-BF1C-90DC809E9486}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7322B024-FC6A-4ED1-99D2-B76AF63637D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7322B024-FC6A-4ED1-99D2-B76AF63637D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7322B024-FC6A-4ED1-99D2-B76AF63637D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7322B024-FC6A-4ED1-99D2-B76AF63637D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
