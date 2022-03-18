@@ -11,14 +11,16 @@ namespace Class04.ExtraHomework.Task6
         {
             Console.Write("Enter a string: ");
             string strMain = Console.ReadLine();
+            string loweredStr = strMain.ToLower();
 
             Console.Write("Enter a substring: ");
             string strSub = Console.ReadLine();
+            string loweredSub = strSub.ToLower();
 
             //string[] strArray = strMain.Split(strSub);
             //Console.WriteLine("The number of occurences of the substring in the main string is {0}", strArray.Length -1);
 
-            int result = OccurencesInString(strMain, strSub);
+            int result = OccurencesInString(loweredStr, loweredSub);
             Console.WriteLine("The number of occurences of the substring in the main string is {0}", result);
 
         }
