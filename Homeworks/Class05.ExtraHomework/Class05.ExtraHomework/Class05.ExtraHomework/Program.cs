@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApp1.Models;
+using System;
 
 //Guess the number
 //Create a program(game) Guess the number. The game should be a Console application. Game rules are for limited tries to guess the number that is randomly generated between two end points.
@@ -33,6 +34,39 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Welcome to the Guess Number game. \n Choose the level of difficulty to continue: \n For EASY, choose 1 \n For NORMAL, choose 2 \n For HARD, choose 3");
+
+            string choice = string.Empty;
+            bool startGame = false;
+            while (!startGame) {
+                choice = Console.ReadLine();
+                switch (choice)
+                {
+                    case "1":
+                        startGame = true;
+                        Console.WriteLine("Starting the game in easy mode.");
+                        break;
+                    case "2":
+                        startGame = true;
+                        Console.WriteLine("Starting the game in normal mode.");
+                        break;
+                    case "3":
+                        startGame = true;
+                        Console.WriteLine("Starting the game in hard mode.");
+                        break;
+                    default:
+                        Console.WriteLine("You entered a wrong character!");
+                        startGame = false;
+                        break;
+                }
+            }
+
+            bool isValidInteger = int.TryParse(choice, out int parsedChoice);
+
+            Game newGame = new Game(parsedChoice);
+            newGame.StartGame();
+            
+
             Console.ReadLine();
         }
     }
