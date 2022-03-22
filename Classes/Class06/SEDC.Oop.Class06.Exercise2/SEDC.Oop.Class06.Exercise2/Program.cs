@@ -9,26 +9,41 @@ namespace SEDC.Oop.Class06.Exercise2
         static void Main(string[] args)
         {
             User[] users = new User[3];
+            users[0] = new User (01, "Aneta", "Password01", new string[] { "Hello Aneta", "Nice to see you again" });
+            users[1] = new User(02, "Aleksandar", "Password02", new string[2] { "Hi Aleksandar", "Welcome back" });
+            users[2] = new User(03, "Stefan", "Password03", new string[2] { "Hello Stefan", "Glad to see you back" });
+
+
             UserService userService = new UserService();
 
-            while (true)
+            string retry = "Y";
+            while (retry == "Y")
+
             {
+                Console.Clear();
                 Console.WriteLine("Menu");
-                Console.WriteLine("1. login");
-                Console.WriteLine("2. register");
-                // validation logic
-                int selection = 1;
+                Console.WriteLine("To login press 1");
+                Console.WriteLine("To register press 2");
+
+                string selection = Console.ReadLine();
                 switch (selection)
                 {
-                    case 1:
-                        users = userService.Login("", "", users);
+                    case "1":
+                        userService.Login(users);
                         break;
-                    case 2:
-                        users = userService.Register(users, 0003, "", "");
+                    case "2":
+                        users = userService.Register(users);
                         break;
                     default:
-                        //validation error
+                        Console.WriteLine("You pressed a wrong key! For retry press Y, to exit press X");
                         break;
+                }
+
+                retry = Console.ReadLine();
+                if(retry == "X")
+                {
+                    Console.WriteLine("Goodbye");
+                    return;
                 }
             }
         }

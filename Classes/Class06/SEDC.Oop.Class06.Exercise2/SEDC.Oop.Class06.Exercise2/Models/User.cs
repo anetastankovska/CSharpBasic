@@ -13,12 +13,12 @@ namespace SEDC.Oop.Class06.Exercise2.Models
         public string Password { get; set; }
         public string[] Messages { get; set; }
 
-        public User(int id, string username, string password, string[] message)
+        public User(int id, string username, string password, string[] messages)
         {
             Id = id;
             Username = username;
             Password = password;
-            Messages = message;
+            Messages = messages;
         }
 
         public User(int id, string username, string password)
