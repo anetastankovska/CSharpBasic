@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SEDC.Oop.Class07.Models\SEDC.Oop.Class07.Models.csproj" />
+    <ProjectReference Include="..\SEDC.Oop.Class07.Services\SEDC.Oop.Class07.Services.csproj" />
+  </ItemGroup>
+
+</Project>
