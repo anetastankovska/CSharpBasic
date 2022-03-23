@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SEDC.Oop.Class07.Exercise.Models.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,17 +12,20 @@ namespace SEDC.Oop.Class07.Exercise.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         protected double Salary { get; set; }
+        public Role Role { get; set; }
 
         public Employee()
         {
 
         }
 
-        public Employee(string firstName, string lastName, double salary)
+        public Employee(string firstName, string lastName, double salary, Role role )
         {
             FirstName = firstName;
             LastName = lastName;
             Salary = salary;
+            Role = role;
+
         }
         public void PrintInfo()
         {
