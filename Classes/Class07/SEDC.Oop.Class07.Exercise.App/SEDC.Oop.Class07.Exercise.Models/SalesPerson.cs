@@ -24,6 +24,7 @@ namespace SEDC.Oop.Class07.Exercise.Models
 
         public override double GetSalary()
         {
+            //I did this because if we call get salary 3 times it will increase it on each call
             double temp = Salary;
             if(SuccessSaleRevenue <= 2000)
             {
