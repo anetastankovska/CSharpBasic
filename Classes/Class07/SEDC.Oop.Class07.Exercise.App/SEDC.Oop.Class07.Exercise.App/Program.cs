@@ -8,11 +8,17 @@ namespace SEDC.Oop.Class07.Exercise.App
     {
         static void Main(string[] args)
         {
-            Employee employee = new Employee("Aneta", "Stankovska", 1000);
-            Console.WriteLine(employee);
+            Employee employee = new Employee("Aneta", "Stankovska", 1000, Role.Other);
+            Console.WriteLine(employee.FirstName);
 
             SalesPerson salesPerson = new SalesPerson("Bob", "Bobsky");
-            Console.WriteLine(salesPerson);
+            Console.WriteLine(salesPerson.FirstName);
+
+            Manager manager = new Manager("Aleksandar", "Zivkovic", 1000, Department.Finance);
+            Console.WriteLine(manager.FirstName);
+
+            Contractor contractor = new Contractor("Stefan", "vanovski", 1200, 40, 10, manager);
+            Console.WriteLine(contractor.FirstName);
 
             Console.ReadLine();
         }
