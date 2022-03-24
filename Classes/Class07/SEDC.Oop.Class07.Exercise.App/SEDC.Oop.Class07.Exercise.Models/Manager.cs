@@ -27,7 +27,8 @@ namespace SEDC.Oop.Class07.Exercise.Models
         }
 
         public override double GetSalary()
-        {            
+        {
+            Console.WriteLine($"The salary of {FirstName} is {Salary}");
             return Salary + Bonus;   
         }
     }

@@ -29,11 +29,12 @@ namespace SEDC.Oop.Class07.Exercise.Models
         }
         public void PrintInfo()
         {
-            Console.WriteLine($"The salary of the empployee named {FirstName} {LastName} is {Salary}");
+            Console.WriteLine($"First name: {FirstName} last name: {LastName}, salary: {Salary}");
         }
 
         virtual public double GetSalary()
         {
+            Console.WriteLine($"The salary of {FirstName} is {Salary}");
             return Salary;
         }
     }

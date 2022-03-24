@@ -10,6 +10,7 @@ namespace SEDC.Oop.Class07.Exercise.Models.Enums
     {
         Sales, 
         Manager,
-        Other
+        Other,
+        CEO
     }
 }

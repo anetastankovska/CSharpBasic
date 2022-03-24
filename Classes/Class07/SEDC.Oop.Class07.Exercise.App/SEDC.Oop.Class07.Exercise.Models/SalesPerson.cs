@@ -37,6 +37,7 @@ namespace SEDC.Oop.Class07.Exercise.Models
             {
                 temp += 1500;
             }
+            Console.WriteLine($"The salary of {FirstName} is {Salary}");
             return temp;
         }
 
