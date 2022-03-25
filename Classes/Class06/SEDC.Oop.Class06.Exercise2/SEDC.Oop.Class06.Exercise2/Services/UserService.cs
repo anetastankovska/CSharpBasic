@@ -9,7 +9,18 @@ namespace SEDC.Oop.Class06.Exercise2.Services
 {
     public class UserService
     {
-        public User Login(User[] users)
+        User[] users;
+
+        public UserService()
+        {
+            users = new User[]
+            {
+                new User(01, "Aneta", "Password01", new string[] { "Hello Aneta", "Nice to see you again" }),
+                new User(02, "Aleksandar", "Password02", new string[2] { "Hi Aleksandar", "Welcome back" }),
+                new User(03, "Stefan", "Password03", new string[2] { "Hello Stefan", "Glad to see you back" })
+            };
+        }
+        public User Login()
         {
             Console.WriteLine("Enter your username:");
             string username = Console.ReadLine();
@@ -22,11 +33,42 @@ namespace SEDC.Oop.Class06.Exercise2.Services
                 {
                     Console.WriteLine($"Welcome {users[i].Username.ToUpper()}. Here are your messages: \n");
                     PrintMessages(users[i]);
+                    Console.WriteLine("\nIf you want to edit your data, press Y");
+                    string response = Console.ReadLine();
+                    if(response == "Y")
+                    {
+                        EditUser(users[i]);
+                    }
                     return users[i];
                 }
             }
             Console.WriteLine("Error!");
             return null;
+        }
+
+        private void EditUser(User user)
+        {
+            Console.WriteLine("For editing username, press U, for editing password press P.");
+            string choice = Console.ReadLine();
+            if(choice == "U")
+            {
+                Console.WriteLine("Enter your new username");
+                string newUsername = Console.ReadLine();
+                user.Username = newUsername;
+                Console.WriteLine($"Your new username is {user.Username}");
+            }
+            else if(choice == "P")
+            {
+                Console.WriteLine("Enter your new password");
+                string newPassword = Console.ReadLine();
+                user.Username = newPassword;
+                Console.WriteLine($"Your new password is {user.Password}");
+            }
+            else
+            {
+                Console.WriteLine("Wrong input");
+                return;
+            }
         }
 
         private void PrintMessages(User user)
@@ -35,12 +77,12 @@ namespace SEDC.Oop.Class06.Exercise2.Services
             Console.WriteLine(joinedMsgs);
         }
 
-        public User[] Register(User[] users)
+        public User[] Register()
         {
             Console.WriteLine("Enter your username:");
             string username = Console.ReadLine();
 
-            while (CheckIfUserExists(users, username))
+            while (CheckIfUserExists(username))
             {
                 Console.WriteLine("The username already exists. Try another one.");
                 username = Console.ReadLine();
@@ -52,13 +94,13 @@ namespace SEDC.Oop.Class06.Exercise2.Services
             Console.WriteLine("Enter your password:");
             string password = Console.ReadLine();
 
-            AddNewUser(new User(id, username, password), ref users);
+            AddNewUser(new User(id, username, password));
             Console.WriteLine("Registration complete! \nUsers:");
-            PrintUsers(users);
+            PrintUsers();
             return users;
         }
 
-        private bool CheckIfUserExists(User[] users, string username)
+        private bool CheckIfUserExists(string username)
         {
             for (int i = 0; i < users.Length; i++)
             {
@@ -71,13 +113,13 @@ namespace SEDC.Oop.Class06.Exercise2.Services
             return false;
         }
 
-        private void AddNewUser(User user, ref User[] users)
+        private void AddNewUser(User user)
         {
             Array.Resize(ref users, users.Length + 1);
             users[users.Length -1] = user;
         }
 
-        private void PrintUsers(User[] users)
+        private void PrintUsers()
         {
             for (int i = 0; i < users.Length; i++)
             {
