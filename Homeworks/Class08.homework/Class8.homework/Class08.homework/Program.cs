@@ -40,8 +40,7 @@ namespace Class08.homework
                 else {
                     queue.Enqueue(parsedInt);
                     return parsedInt;
-                };
-                
+                }
             } 
         }
 
