@@ -16,14 +16,14 @@ namespace SEDC.Oop.Class08.Exercise2
         public List<Song> FavoriteSongs { get; set; }
         
 
-        public Person(int id, string firstName, string lastName, int age, Genres genre, List<Song> songs)
+        public Person(int id, string firstName, string lastName, int age, Genres genre)
         {
             Id = id;
             FirstName = firstName;
             LastName = lastName;
             Age = age;
             FavoriteMusicType = genre;
-            FavoriteSongs = songs;
+            FavoriteSongs = new List<Song>();
         }
 
         public void GetFavouriteSongs()
