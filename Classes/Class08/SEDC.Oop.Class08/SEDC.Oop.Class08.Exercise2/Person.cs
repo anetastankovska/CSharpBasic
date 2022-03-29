@@ -30,7 +30,7 @@ namespace SEDC.Oop.Class08.Exercise2
         {
             if(FavoriteSongs.Count == 0)
             {
-                Console.WriteLine("The person hates music!");
+                Console.WriteLine("This person hates music.");
             }
             else
             {
