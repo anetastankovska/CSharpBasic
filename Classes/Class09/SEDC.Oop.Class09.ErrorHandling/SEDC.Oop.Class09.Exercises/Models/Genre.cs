@@ -8,10 +8,10 @@ namespace SEDC.Oop.Class09.Exercises.Models
 {
     public enum Genre
     {
-        Comedy, 
-        Horror, 
-        Action,
-        Drama, 
-        SciFi
+        Comedy = 1, 
+        Horror = 2, 
+        Action =3,
+        Drama = 4, 
+        SciFi = 5
     }
 }

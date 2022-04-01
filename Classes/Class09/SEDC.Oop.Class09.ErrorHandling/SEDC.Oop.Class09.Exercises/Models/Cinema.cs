@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SEDC.Oop.Class09.Exercises.Models
 {
+
     public class Cinema
     {
         public string Name { get; set; }
@@ -23,7 +24,8 @@ namespace SEDC.Oop.Class09.Exercises.Models
         {
             Console.WriteLine($"Watching {movie.Title}.");
         }
-    }
 
+    }
+                      
     
 }

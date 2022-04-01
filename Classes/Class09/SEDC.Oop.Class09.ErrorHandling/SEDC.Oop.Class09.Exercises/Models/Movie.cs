@@ -17,7 +17,7 @@ namespace SEDC.Oop.Class09.Exercises.Models
         {
             Title = title;
             Genre = genre;
-            if(rating < 1 || rating > 5)
+            if(rating < 1 || rating > 10)
             {
                 throw new Exception("The number is not correct");
             }
