@@ -125,6 +125,7 @@ namespace SEDC.Oop.Class09.Exercises.Models
                 ChooseGenreOrAllMovies(cinema);
             }
         }
+
         public void ShowCinemaWelcomeScreen(Cinema cinema)
         {
             Console.Clear();
