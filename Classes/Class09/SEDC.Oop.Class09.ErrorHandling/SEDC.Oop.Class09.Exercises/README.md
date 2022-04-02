@@ -1,4 +1,4 @@
-Projact requirements:
+**Project requirements**
 
 1. Make a class Movie. Movie must have: Title, Genre, Rating, TicketPrice and a constructor for setting them
 2. Rating should be a number from 1 to 5. Throw exception if its more or less ( you should also handle other exceptions )
