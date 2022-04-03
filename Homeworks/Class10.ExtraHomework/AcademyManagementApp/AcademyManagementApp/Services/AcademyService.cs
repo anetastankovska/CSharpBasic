@@ -21,6 +21,16 @@ namespace AcademyManagementApp.Services
 
         public void InitializeData()
         {
+            List<Subject> subjects = new List<Subject>
+            {
+                new ("HTMLAndCSS"),
+                new ("JavaScriptBasic"),
+                new ("JavaScriptAdvanced"),
+                new ("CSharpBasic"),
+                new ("CSharpAdvanced")
+            };
+            subjects.ForEach(x => Subjects.Add(x));
+
             List<Admin> admins = new List<Admin>
             {
                 new ("admin1", "admin123", "Aneta", "Stankovska"),
@@ -37,25 +47,17 @@ namespace AcademyManagementApp.Services
 
             List<Student> students = new List<Student>
             {
-                new ("student1", "student123", "Igor", "Nikoloski"),
-                new ("student2", "student234", "Marija", "Kolevska"),
-                new ("student3", "student345", "Ilija", "Mitev"),
-                new ("student4", "student456", "Maja", "Nikolic"),
-                new ("student5", "student567", "Kristijan", "Karanfilovski"),
-                new ("student6", "student678", "Ana", "Kirovska"),
-                new ("student7", "student789", "Slave", "Trajkovski"),
-                new ("student8", "student891", "Timotej", "Bojarovski"),
-                new ("student9", "student912", "Bob", "Bobsky"),
+                new ("student1", "student123", "Igor", "Nikoloski"){ Grades = GenerateGrades(3)},
+                new ("student2", "student234", "Marija", "Kolevska"){ Grades = GenerateGrades(5)},
+                new ("student3", "student345", "Ilija", "Mitev") { Grades = GenerateGrades(2)},
+                new ("student4", "student456", "Maja", "Nikolic") { Grades = GenerateGrades(4)},
+                new ("student5", "student567", "Kristijan", "Karanfilovski") { Grades = GenerateGrades(3)},
+                new ("student6", "student678", "Ana", "Kirovska") { Grades = GenerateGrades(5)},
+                new ("student7", "student789", "Slave", "Trajkovski") { Grades = GenerateGrades(5)},
+                new ("student8", "student891", "Timotej", "Bojarovski") { Grades = GenerateGrades(4)},
+                new ("student9", "student912", "Bob", "Bobsky"){ Grades = GenerateGrades(2)},
             };
 
-            List<Subject> subjects = new List<Subject>
-            {
-                new ("HTMLAndCSS"),
-                new ("JavaScriptBasic"),
-                new ("JavaScriptAdvanced"),
-                new ("CSharpBasic"),
-                new ("CSharpAdvanced")
-            };
 
             enrollToSubject(students[0], subjects[0]);
             enrollToSubject(students[1], subjects[1]);
@@ -69,7 +71,7 @@ namespace AcademyManagementApp.Services
             admins.ForEach(x => People.Add(x));
             trainers.ForEach(x => People.Add(x));
             students.ForEach(x => People.Add(x));
-            subjects.ForEach(x => Subjects.Add(x));
+            
         }
 
         public List<Student> GetStudents()
@@ -213,6 +215,20 @@ namespace AcademyManagementApp.Services
         {
             student.CurrentSubject = subject;
             subject.Students.Add(student);
+        }
+
+        public Dictionary<string, int> GenerateGrades(int numberOfSubjects)
+        {
+            List<string> predmeti = Subjects.Select(x => x.Title).ToList();
+            Random rnd = new Random();
+            Dictionary<string, int> result = new Dictionary<string, int>();
+            while (result.Count < numberOfSubjects)
+            {
+                string temp = predmeti[rnd.Next(predmeti.Count - 1)];
+                result.Add(temp, rnd.Next(4)+1);
+                predmeti.Remove(temp);
+            }
+            return result;
         }
     }
 }

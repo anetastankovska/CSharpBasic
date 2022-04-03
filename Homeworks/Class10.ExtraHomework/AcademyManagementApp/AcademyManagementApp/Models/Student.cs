@@ -23,9 +23,10 @@ namespace AcademyManagementApp.Models
 
         public override string ToString()
         {
+            Console.Clear();
             List<string> data = new List<string>();
-            data.Add($"The subject you are currently attending is {CurrentSubject}");
-            data.Add("Your grades per subject:");
+            data.Add($"The currently attending subject is {CurrentSubject.Title}");
+            data.Add("The grades per subject:");
             foreach (string key in Grades.Keys)
             {
                 data.Add($"{key}: {Grades[key]}");

@@ -17,13 +17,22 @@ namespace AcademyManagementApp.Models
         {
 
         }
-        public void ReadStudents()
+        public Student ReadStudents()
         {
             List<Student> students = Service.GetStudents();
             Service.ShowStudents();
             int chosenIndex = Service.ShowMenu("Choose a student to see details", 1, students.Count);
             Student chosenStudent = students[chosenIndex];
             Console.WriteLine(chosenStudent);
+            return chosenStudent;
+        }
+
+        public void ReadStudentSubject(Student student)
+        {
+            foreach (string key in student.Grades.Keys)
+            {
+                Console.WriteLine($"{key} : {student.Grades[key]}");
+            }
         }
 
         public void ReadSubjects()

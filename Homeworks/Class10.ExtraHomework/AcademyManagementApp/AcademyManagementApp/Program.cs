@@ -90,7 +90,8 @@ namespace AcademyManagementApp
                         int selectedOption1 = service.ShowMenu("Please select what you wish to read: \n1. Students \n2. Subjects", 1, 2);
                         if (selectedOption1 == 1)
                         {
-                            trainer.ReadStudents();
+                            Student selected = trainer.ReadStudents();
+                            trainer.ReadStudentSubject(selected);
                             break;
                         }
                         if (selectedOption1 == 2)
@@ -108,9 +109,7 @@ namespace AcademyManagementApp
                 case "Student":
                     Student student = activeUser as Student;
                     Console.Clear();
-                    student.ToString();
-                    Console.WriteLine("Press Enter to continue");
-                    Console.ReadKey();
+                    Console.WriteLine(student.ToString());
                     break;
                 default:
                     break;
