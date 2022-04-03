@@ -100,7 +100,6 @@ namespace AcademyManagementApp.Models
                 }
             }
 
-
             Console.WriteLine("Enter the Last Name:");
             while (true)
             {

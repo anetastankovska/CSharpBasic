@@ -19,7 +19,7 @@ namespace AcademyManagementApp.Database
             Admins = new List<Admin>
             {
                 new Admin("admin1", "admin123", "Aneta", "Stankovska"),
-                new Admin("admin2", "admin234", "Stefan", "Ivanocski"),
+                new Admin("admin2", "admin234", "Stefan", "Ivanovski"),
                 new Admin("admin3", "admin345", "Aleksandar", "Zivkovic")
             };
 

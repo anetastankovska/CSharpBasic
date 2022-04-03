@@ -33,5 +33,6 @@ namespace AcademyManagementApp.Models
             string result = string.Join("\n", data);
             return result;
         }
+
     }
 }

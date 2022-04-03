@@ -45,7 +45,7 @@ namespace AcademyManagementApp.Services
                 new ("student6", "student678", "Ana", "Kirovska"),
                 new ("student7", "student789", "Slave", "Trajkovski"),
                 new ("student8", "student891", "Timotej", "Bojarovski"),
-                new ("student9", "student912", "Bob", "Bobsky")
+                new ("student9", "student912", "Bob", "Bobsky"),
             };
 
             List<Subject> subjects = new List<Subject>
