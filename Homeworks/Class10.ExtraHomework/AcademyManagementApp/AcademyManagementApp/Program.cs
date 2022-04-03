@@ -11,7 +11,6 @@ namespace AcademyManagementApp
     {
         static void Main(string[] args)
         {
-
             AcademyService service = new AcademyService();
             service.InitializeData();
 
