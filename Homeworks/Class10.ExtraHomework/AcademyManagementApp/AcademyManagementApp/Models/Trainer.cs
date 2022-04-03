@@ -10,6 +10,13 @@ namespace AcademyManagementApp.Models
     public class Trainer : Person
     {
         public AcademyService Service { get; set; }
+
+        public Trainer() { }
+        public Trainer(string username, string password, string firstName, string lastName)
+            :base(username, password, firstName, lastName)
+        {
+
+        }
         public void ReadStudents()
         {
             List<Student> students = Service.GetStudents();

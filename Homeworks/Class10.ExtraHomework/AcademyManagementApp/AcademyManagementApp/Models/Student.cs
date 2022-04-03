@@ -15,6 +15,11 @@ namespace AcademyManagementApp.Models
         {
             Grades = new Dictionary<string, int>();
         }
+        public Student(string username, string password, string firstName, string lastName)
+            : base(username, password, firstName, lastName)
+        {
+            Grades = new Dictionary<string, int>();
+        }
 
         public override string ToString()
         {

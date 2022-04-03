@@ -15,5 +15,11 @@ namespace AcademyManagementApp.Models
         {
             Students = new List<Student>();
         }
+
+        public Subject(string title)
+        {
+            Title = title;
+            Students = new List<Student>();
+        }
     }
 }

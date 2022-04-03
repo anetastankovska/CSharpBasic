@@ -13,5 +13,13 @@ namespace AcademyManagementApp.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
+        public Person() { }
+        public Person(string username, string password, string firstName, string lastName)
+        {
+            Username = username;
+            Password = password;
+            FirstName = firstName;
+            LastName = lastName;
+        }
     }
 }
