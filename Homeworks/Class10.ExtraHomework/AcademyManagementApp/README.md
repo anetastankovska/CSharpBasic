@@ -1,9 +1,9 @@
 **Create an Academy Management app**
 1. The app will have users that can log in and perform some actions. The user can choose one of the 3 roles and log in:
 
-*Admin
-*Trainer
-*Student ( has a current Subject, and Grades )
+- Admin
+- Trainer
+- Student ( has a current Subject, and Grades )
 
 2. After logging in there should be different options for different roles:
 
